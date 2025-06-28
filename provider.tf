@@ -13,3 +13,10 @@ terraform {
     }
   }
 }
+
+terraform {
+  backend "gcs" {
+    bucket  = "skrish2020_tf_state"
+    prefix  = "terraform/state"
+  }
+}
