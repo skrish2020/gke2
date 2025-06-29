@@ -8,6 +8,7 @@ resource "google_compute_firewall" "allow-iap-ssh" {
     }
     source_ranges = ["35.235.240.0/20"]
 }
+
 /*
 resource "google_compute_firewall" "lb" {
   name        = "k8s-fw-abdca8a7bd83f4a84a8fb7a869242967"
