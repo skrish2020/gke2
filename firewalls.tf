@@ -4,7 +4,7 @@ resource "google_compute_firewall" "allow-iap-ssh" {
 
     allow {
         protocol = "tcp"
-        ports = ["22", "3389", "6443"]
+        ports = ["22", "3389"]
     }
     source_ranges = ["35.235.240.0/20"]
 }
