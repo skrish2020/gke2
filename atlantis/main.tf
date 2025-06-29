@@ -18,7 +18,7 @@ resource "google_compute_instance" "atlantis" {
     subnetwork = var.subnetwork
 
     access_config {
-      # Assign a public IP address to the instance.  Remove this block if you
+      # Assign a public IP address too the instance.  Remove this block if you
       # only want the instance to be accessible from within the VPC.
     }
   }
