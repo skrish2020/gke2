@@ -2,7 +2,6 @@
 set -e
 
 . ./atlantis.var
-
 ./atlantis server \
 --atlantis-url="$URL" \
 --gh-user="$USERNAME" \
