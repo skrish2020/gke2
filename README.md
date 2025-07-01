@@ -16,14 +16,13 @@ Opportunities for further optimizations:
 a.	Change the kubctl argcd server install to terraform provider based install.
 b.	Webhooks to change to github app based webhooks
 
-Fig 1
+Fig 1: atlantis.jpg
  
 
-
-
-Fig 2:
+Fig 2:atlantis2.jpg
  
-Fig 3:
+Fig 3:argocd.jpg
+
  
 
 

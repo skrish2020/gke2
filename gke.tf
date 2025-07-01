@@ -1,6 +1,6 @@
 resource "google_container_cluster" "gke" {
   name    = "gke-cluster1"
-  location = local.region
+  location = var.region
   remove_default_node_pool = true
   initial_node_count = 1
   network    = google_compute_network.vpc.self_link
@@ -23,7 +23,7 @@ resource "google_container_cluster" "gke" {
     channel = "REGULAR"
   }
   workload_identity_config {
-    workload_pool = "${local.project_id}.svc.id.goog"
+    workload_pool = "${var.project_id}.svc.id.goog"
   }
   ip_allocation_policy {
     cluster_secondary_range_name = "k8s-pods"
