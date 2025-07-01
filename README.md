@@ -19,11 +19,10 @@ b.	Webhooks to change to github app based webhooks
 Fig 1: atlantis.jpg
  
 
-
-
 Fig 2:atlantis2.jpg
  
 Fig 3:argocd.jpg
+
  
 
 
