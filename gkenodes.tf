@@ -6,14 +6,14 @@ resource "google_service_account" "gke" {
 }
 
 resource "google_project_iam_member" "gke_logging" {
-    project = local.project_id
+    project = var.project_id
     role    = "roles/logging.logWriter"
     member  = "serviceAccount:${google_service_account.gke.email}"
   
 }
 
 resource "google_project_iam_member" "gke_metrics" {
-    project = local.project_id
+    project = var.project_id
     role    = "roles/monitoring.metricWriter"
     member  = "serviceAccount:${google_service_account.gke.email}"
   
@@ -22,7 +22,7 @@ resource "google_project_iam_member" "gke_metrics" {
 
 resource "google_container_node_pool" "general" {
     name       = "general-pool"
-    location   = local.region
+    location   = var.region
     cluster    = google_container_cluster.gke.id
     node_count = 1
 
